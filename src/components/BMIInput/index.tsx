@@ -9,7 +9,7 @@ export function BMIInput(props) {
 
   return (
     <View style={styles.inputContainer}>
-      <Text style={styles.inputHeaderText}>Peso em kg</Text>
+      <Text style={styles.inputHeaderText}>Weight in kg</Text>
       <TextInput
         style={styles.textInputContainer}
         keyboardType="numeric"
@@ -17,17 +17,17 @@ export function BMIInput(props) {
         onChangeText={setWeight}
         value={weight}
       ></TextInput>
-      <Text style={styles.inputHeaderText}>Altura em metros</Text>
+      <Text style={styles.inputHeaderText}>Height in meters</Text>
       <TextInput
         style={styles.textInputContainer}
         keyboardType="numeric"
-        placeholder="Metros"
+        placeholder="Meters (ex: 1.70)"
         onChangeText={setHeight}
         value={height}
       ></TextInput>
       <View style={styles.confirmButton}>
         <Button
-          title="Calcular"
+          title="Calculate"
           color={theme.colors.greenCeltics}
           onPress={props.onClickButton.bind(this, weight, height)}
         />
